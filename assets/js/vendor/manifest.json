@@ -1,0 +1,1124 @@
+{
+  "strName": "LEO dynamic menu gomo asset",
+  "strDescription": "LEO dynamic menu gomo asset",
+  "strID": "leo-dynamic-menu-gomo-asset",
+  "strManifestType": "asset",
+  "booCanBeInSubScreen": true,
+  "objDataTemplate": {
+    "strID": "",
+    "strLabel": "",
+    "strType": "leo-dynamic-menu-gomo-asset",
+    "strGroup": "presentation",
+    "strVersion": "1.0",
+    "strLayoutID": "",
+    "strDataType": "assets",
+    "intLayoutColumn": null,
+    "intColumnPositionIndex": null,
+    "booGroupTemplateDataLocked": null,
+    "strGroupTemplateId": null,
+    "booInteractive": false,
+    "arrSearchableFields": [],
+    "arrTranslatableFields": [
+      "categories.#.strTitle",
+      "categories.#.strTagList",
+      "categories.#.objNormalIconFilename.strSrc",
+      "categories.#.objSelectedIconFilename.strSrc",
+      "activities.#.strTitle",
+      "activities.#.strButtonText",
+      "activities.#.strTagList",
+      "activities.#.strDuration",
+      "activities.#.objImageFilename.strSrc",
+      "selectedCategories.#.strTag"
+    ],
+    "objDeveloperOptions": {
+      "objMetaData": {
+        "strRawMetaData": ""
+      },
+      "objAdvancedStyling": {
+        "strCustomCSSClasses": ""
+      }
+    },
+    "arrDisplayConditions": [],
+    "objActionSets": {},
+    "objDisplayAnimation": {
+      "strAnimationType": "none",
+      "intAnimationDelay": 1,
+      "intAnimationDuration": 1
+    },
+    "categories": [{
+      "strID": "##PARENT_ID##c0##REPEATABLE_COUNT##",
+      "strTitle": "",
+      "strTagList": "",
+      "strShowAs": "",
+      "objNormalIconFilename": {
+        "strSrc": "",
+        "strAltText": "",
+        "strBriefText": ""
+      },
+      "objSelectedIconFilename": {
+        "strSrc": "",
+        "strAltText": "",
+        "strBriefText": ""
+      }
+    }],
+    "activities": [{
+      "strID": "##PARENT_ID##a0##REPEATABLE_COUNT##",
+      "strTitle": "",
+      "strButtonText": "",
+      "strTagList": "",
+      "strDuration": "",
+      "strScore": "1",
+      "arrActions": [],
+      "objImageFilename": {
+        "strSrc": "",
+        "strAltText": "",
+        "strBriefText": ""
+      },
+      "strImageAlignment": "",
+      "strBorderColour": "#555555"
+    }],
+    "arrGomoVariables": [{
+      "strID": "##PARENT_ID##v0##REPEATABLE_COUNT##",
+      "strName": ""
+    }],
+    "showDeveloperSettings": false,
+    "showStatus": true,
+    "strScoreOutputVariable": "",
+    "copyDataFromAsset": "",
+    "selectedCategories": [{
+      "strID": "##PARENT_ID##sc0##REPEATABLE_COUNT##",
+      "strCategoryID": "",
+      "strTag": ""
+    }]
+  },
+  "objFiles": {
+    "example.css": "base",
+    "example.html": "base",
+    "example.js": "base"
+  },
+  "objDependancies": {},
+  "objInPageRenderDirectives": {
+    "objCoreOutputSettings": {
+      "strPlaceholderImage": "thumbnail.png",
+      "strBackgroundImage": "",
+      "strBackgroundAlignmentCSS": "",
+      "strDarkIconFilename": "icon_grey.png",
+      "strLightIconFilename": "icon_white.png",
+      "strWrapperClasses": "exampleWrapperC"
+    },
+    "objFitForRenderDeclarations": {
+      "booMatchAllCriteria": false,
+      "arrFitForRenderTests": [{
+        "strTestType": "SOME_REPEATABLE_EXISTS",
+        "strBoundRepeatableArray": "activities",
+        "strBoundValue": "strTitle"
+      }, {
+        "strTestType" : "CONTENT_PRESENT",
+        "strBoundValue" : "copyDataFromAsset"
+      }]
+    },
+    "arrContentOutputDirectives": [{
+        "strDirectiveType": "BOUND_TEXT",
+        "strContentText": "Categories",
+        "arrReplaceBinds": [],
+        "strStaticClasses": "gomo-h2SubHeadingImportedC",
+        "strDynamicClassMapping": "",
+        "arrDynamicClassReplaceBinds": [],
+        "arrVisibilityCheckMethods": [],
+        "arrInlineStyleStringGenerators": []
+      },
+      {
+        "strDirectiveType": "REPEATER",
+        "strStaticClasses": "",
+        "strBoundRepeatableArrayPath": "categories",
+        "strWrapperDynamicClassMapping": "",
+        "arrWrapperDynamicClassReplaceBinds": [],
+        "strBlockDynamicClassMapping": "",
+        "arrBlockDynamicClassReplaceBinds": [],
+        "arrRepeatableDirectives": [{
+          "strDirectiveType": "BOUND_TEXT",
+          "strContentText": "<strong>{1}</strong>: {2}",
+          "arrReplaceBinds": [
+            "strTitle",
+            "strTagList"
+          ],
+          "strStaticClasses": "leftFloatBox90C",
+          "strDynamicClassMapping": "",
+          "arrDynamicClassReplaceBinds": [],
+          "arrVisibilityCheckMethods": [{
+            "strCheckType": "IS_PROPERTY_SET",
+            "strPropertyToCheck": "strTitle"
+          }],
+          "arrInlineStyleStringGenerators": []
+        }],
+        "arrVisibilityCheckMethods": [],
+        "arrInlineStyleStringGenerators": []
+      },
+      {
+        "strDirectiveType": "BOUND_TEXT",
+        "strContentText": "Activities",
+        "arrReplaceBinds": [],
+        "strStaticClasses": "gomo-h2SubHeadingImportedC",
+        "strDynamicClassMapping": "",
+        "arrDynamicClassReplaceBinds": [],
+        "arrVisibilityCheckMethods": [],
+        "arrInlineStyleStringGenerators": []
+      },
+      {
+        "strDirectiveType": "REPEATER",
+        "strStaticClasses": "",
+        "strBoundRepeatableArrayPath": "activities",
+        "strWrapperDynamicClassMapping": "",
+        "arrWrapperDynamicClassReplaceBinds": [],
+        "strBlockDynamicClassMapping": "",
+        "arrBlockDynamicClassReplaceBinds": [],
+        "arrRepeatableDirectives": [{
+          "strDirectiveType": "BOUND_TEXT",
+          "strContentText": "<strong>{1}</strong>: {2}",
+          "arrReplaceBinds": [
+            "strTitle",
+            "strTagList"
+          ],
+          "strStaticClasses": "leftFloatBox90C",
+          "strDynamicClassMapping": "",
+          "arrDynamicClassReplaceBinds": [],
+          "arrVisibilityCheckMethods": [{
+            "strCheckType": "IS_PROPERTY_SET",
+            "strPropertyToCheck": "strTitle"
+          }],
+          "arrInlineStyleStringGenerators": []
+        }],
+        "arrVisibilityCheckMethods": [],
+        "arrInlineStyleStringGenerators": []
+      },
+      {
+				"strDirectiveType" : "BOUND_TEXT",
+				"strContentText" : "<strong>Copy data from asset</strong>: {1}",
+				"arrReplaceBinds" :
+				[
+					"copyDataFromAsset"
+				],
+				"strStaticClasses" : "",
+				"strDynamicClassMapping" : "",
+				"arrDynamicClassReplaceBinds" :[],
+				"arrVisibilityCheckMethods" : [],
+				"arrInlineStyleStringGenerators" : []
+			}
+    ]
+  },
+  "objInspectorRenderDirectives": {
+    "arrHeadRenderDirectives": [{
+        "strDirectiveType": "BLOCK_START",
+        "strBlockTitle": "Details",
+        "booIsExpanded": true,
+        "strVisibilityCheckMethod": null
+      },
+      {
+        "strDirectiveTitle": "ID: ",
+        "strDirectiveType": "STATIC_TEXT",
+        "strDirectiveStyle": "row30_70",
+        "strStaticValue": null,
+        "strBoundValue": "strID",
+        "booTemplateability": false,
+        "strTooltip": "This is the assets ID",
+        "strVisibilityCheckMethod": null,
+        "strEncodingType": "standard"
+      },
+      {
+        "strDirectiveTitle": "Label: ",
+        "strDirectiveType": "SINGLE_TEXT",
+        "strDirectiveStyle": "row30_70",
+        "strStaticValue": null,
+        "strBoundValue": "strLabel",
+        "booTemplateability": false,
+        "strTooltip": "This is the assets tooltip",
+        "strInitialValue": "",
+        "strEnabledCheckMethod": null,
+        "strUpdateCallback": "",
+        "strVisibilityCheckMethod": null,
+        "strEncodingType": "standard"
+      },
+      {
+        "strDirectiveType": "BLOCK_END",
+        "strVisibilityCheckMethod": null
+      }
+    ],
+    "arrMainRenderDirectives": [{
+        "strDirectiveType": "BLOCK_START",
+        "strBlockTitle": "Content",
+        "booIsExpanded": true,
+        "strVisibilityCheckMethod": null
+      },
+      {
+        "strDirectiveTitle": "",
+        "strDirectiveButtonTitle": "Categories",
+        "strDirectivePopupTitle": "Configure Categories",
+        "strDirectiveType": "SUBINSPECTOR",
+        "strDirectiveStyle": "row100",
+        "strPopupDimensionClasses": "popupInspectorMessageSplitDefinitionTallC popupInspectorMessageSplitDefinitionWideC orangePopupInspectorC",
+        "booIsPrimaryConfigurationPopup": true,
+        "arrSubInspectorRenderDirectives": [{
+            "strDirectiveType": "BLOCK_START",
+            "strBlockTitle": "Categories",
+            "booIsExpanded": true,
+            "strVisibilityCheckMethod": null
+          },
+          {
+            "strDirectiveTitle": "",
+            "strDirectiveType": "REPEATABLE_BLOCK",
+            "strBoundValue": "categories",
+            "arrOptionalColumnTitleDefinitions": [],
+            "arrBlockRenderDirectives": [{
+              "strDirectiveTitle": "ID: ",
+              "strDirectiveType": "STATIC_TEXT",
+              "strDirectiveStyle": "span20",
+              "strStaticValue": null,
+              "strBoundValue": "categories.#.strID",
+              "booTemplateability": false,
+              "strTooltip": "This is the category ID",
+              "strVisibilityCheckMethod": null,
+              "strEncodingType": "standard"
+            },
+            {
+                "strDirectiveTitle": "Title: ",
+                "strDirectiveType": "SINGLE_TEXT",
+                "strDirectiveStyle": "span30",
+                "strStaticValue": null,
+                "strBoundValue": "categories.#.strTitle",
+                "booTemplateability": false,
+                "strTooltip": "",
+                "strInitialValue": "",
+                "strEnabledCheckMethod": null,
+                "strUpdateCallback": "",
+                "strVisibilityCheckMethod": null,
+                "strEncodingType": "standard"
+              },
+              {
+                "strDirectiveTitle": "Tag List: ",
+                "strDirectiveType": "SINGLE_TEXT",
+                "strDirectiveStyle": "span50",
+                "strStaticValue": null,
+                "strBoundValue": "categories.#.strTagList",
+                "booTemplateability": false,
+                "strTooltip": "",
+                "strInitialValue": "",
+                "strEnabledCheckMethod": null,
+                "strUpdateCallback": "",
+                "strVisibilityCheckMethod": null,
+                "strEncodingType": "standard"
+              },
+              {
+                "strDirectiveTitle": "Show As: ",
+                "strDirectiveType": "DROPDOWN",
+                "strDirectiveStyle": "span40",
+                "strStaticValue": null,
+                "strBoundValue": "categories.#.strShowAs",
+                "booTemplateability": true,
+                "strTooltip": "",
+                "intSelectedIndex": 0,
+                "arrDropdownContents": [{
+                    "strType": "static",
+                    "strTitle": "Dropdowns",
+                    "strValue": "dropdowns"
+                  },
+                  {
+                    "strType": "static",
+                    "strTitle": "Buttons",
+                    "strValue": "buttons"
+                  }
+                ],
+                "strEnabledCheckMethod": null,
+                "strCustomValueExtractionHandler": null,
+                "strUpdateCallback": null
+              },
+              {
+                "strDirectiveTitle": "Normal Icon: ",
+                "strDirectiveType": "SINGLE_TEXT_WITH_BROWSE",
+                "strDirectiveStyle": "span30",
+                "strStaticValue": null,
+                "strBoundValue": "categories.#.objNormalIconFilename.strSrc",
+                "booTemplateability": false,
+                "strTooltip": "",
+                "strInitialValue": "##ASSET_ID##.png",
+                "arrAllowedFileTypes": [
+                  "##IMAGE_FILES##"
+                ],
+                "arrViewTypes": [
+                  "list",
+                  "small-thumb",
+                  "medium-thumb",
+                  "large-thumb"
+                ],
+                "strEnabledCheckMethod": null,
+                "strUpdateCallback": null,
+                "strVisibilityCheckMethod": null,
+                "booShowEditButton": true,
+                "strEncodingType": "url"
+              },
+              {
+                "strDirectiveTitle": "Selected Icon: ",
+                "strDirectiveType": "SINGLE_TEXT_WITH_BROWSE",
+                "strDirectiveStyle": "span30",
+                "strStaticValue": null,
+                "strBoundValue": "categories.#.objSelectedIconFilename.strSrc",
+                "booTemplateability": false,
+                "strTooltip": "",
+                "strInitialValue": "##ASSET_ID##.png",
+                "arrAllowedFileTypes": [
+                  "##IMAGE_FILES##"
+                ],
+                "arrViewTypes": [
+                  "list",
+                  "small-thumb",
+                  "medium-thumb",
+                  "large-thumb"
+                ],
+                "strEnabledCheckMethod": null,
+                "strUpdateCallback": null,
+                "strVisibilityCheckMethod": null,
+                "booShowEditButton": true,
+                "strEncodingType": "url"
+              }
+            ],
+            "strAddCallback": "",
+            "strRemoveCallback": "",
+            "strVisibilityCheckMethod": null
+          },
+          {
+            "strDirectiveType": "BLOCK_END",
+            "strVisibilityCheckMethod": null
+          }
+        ],
+        "strOpenedCallback": "",
+        "strVerfifcationCallback": "",
+        "strClosedCallback": "",
+        "strVisibilityCheckMethod": null
+      },
+      {
+        "strDirectiveTitle": "",
+        "strDirectiveButtonTitle": "Activities",
+        "strDirectivePopupTitle": "Configure Activities",
+        "strDirectiveType": "SUBINSPECTOR",
+        "strDirectiveStyle": "row100",
+        "strPopupDimensionClasses": "popupInspectorMessageSplitDefinitionTallC popupInspectorMessageSplitDefinitionWideC orangePopupInspectorC",
+        "booIsPrimaryConfigurationPopup": true,
+        "arrSubInspectorRenderDirectives": [{
+            "strDirectiveType": "BLOCK_START",
+            "strBlockTitle": "Activities",
+            "booIsExpanded": true,
+            "strVisibilityCheckMethod": null
+          },
+          {
+            "strDirectiveTitle": "Activity",
+            "strDirectiveType": "REPEATABLE_BLOCK",
+            "strBoundValue": "activities",
+            "arrOptionalColumnTitleDefinitions": [],
+            "arrBlockRenderDirectives": [{
+                "strDirectiveTitle": "Title: ",
+                "strDirectiveType": "SINGLE_TEXT",
+                "strDirectiveStyle": "span30",
+                "strStaticValue": null,
+                "strBoundValue": "activities.#.strTitle",
+                "booTemplateability": false,
+                "strTooltip": "",
+                "strInitialValue": "",
+                "strEnabledCheckMethod": null,
+                "strUpdateCallback": "",
+                "strVisibilityCheckMethod": null,
+                "strEncodingType": "standard"
+              },
+              {
+                "strDirectiveTitle": "Short description: ",
+                "strDirectiveType": "SINGLE_TEXT",
+                "strDirectiveStyle": "span70",
+                "strStaticValue": null,
+                "strBoundValue": "activities.#.strButtonText",
+                "booTemplateability": false,
+                "strTooltip": "",
+                "strInitialValue": "",
+                "strEnabledCheckMethod": null,
+                "strUpdateCallback": "",
+                "strVisibilityCheckMethod": null,
+                "strEncodingType": "standard"
+              },
+              {
+                "strDirectiveTitle": "Tag List: ",
+                "strDirectiveType": "SINGLE_TEXT",
+                "strDirectiveStyle": "span30",
+                "strStaticValue": null,
+                "strBoundValue": "activities.#.strTagList",
+                "booTemplateability": false,
+                "strTooltip": "",
+                "strInitialValue": "",
+                "strEnabledCheckMethod": null,
+                "strUpdateCallback": "",
+                "strVisibilityCheckMethod": null,
+                "strEncodingType": "standard"
+              },
+              {
+                "strDirectiveTitle": "Duration: ",
+                "strDirectiveType": "SINGLE_TEXT",
+                "strDirectiveStyle": "span20",
+                "strStaticValue": null,
+                "strBoundValue": "activities.#.strDuration",
+                "booTemplateability": false,
+                "strTooltip": "",
+                "strInitialValue": "",
+                "strEnabledCheckMethod": null,
+                "strUpdateCallback": "",
+                "strVisibilityCheckMethod": null,
+                "strEncodingType": "standard"
+              },
+              {
+                "strDirectiveTitle": "Score: ",
+                "strDirectiveType": "SINGLE_TEXT",
+                "strDirectiveStyle": "span20",
+                "strStaticValue": null,
+                "strBoundValue": "activities.#.strScore",
+                "booTemplateability": false,
+                "strTooltip": "",
+                "strInitialValue": "1",
+                "strEnabledCheckMethod": null,
+                "strUpdateCallback": "",
+                "strVisibilityCheckMethod": null,
+                "strEncodingType": "standard"
+              },
+              {
+                "strDirectiveTitle": "Actions: ",
+                "strButtonTitle": "ACTIONS",
+                "strPopupTitle": "Button",
+                "strDirectiveType": "ACTIONS_BUTTON",
+                "strDirectiveStyle": "span30",
+                "booIsPrimaryConfigurationPopup": true,
+                "strStaticValue": null,
+                "strBoundValue": "activities.#.arrActions",
+                "booTemplateability": true,
+                "strTooltip": "",
+                "strEnabledCheckMethod": null,
+                "strUpdateCallback": null,
+                "strVisibilityCheckMethod": null
+              },
+              {
+                "strDirectiveTitle": "Image: ",
+                "strDirectiveType": "SINGLE_TEXT_WITH_BROWSE",
+                "strDirectiveStyle": "span40",
+                "strStaticValue": null,
+                "strBoundValue": "activities.#.objImageFilename.strSrc",
+                "booTemplateability": false,
+                "strTooltip": "",
+                "strInitialValue": "##ASSET_ID##.png",
+                "arrAllowedFileTypes": [
+                  "##IMAGE_FILES##"
+                ],
+                "arrViewTypes": [
+                  "list",
+                  "small-thumb",
+                  "medium-thumb",
+                  "large-thumb"
+                ],
+                "strEnabledCheckMethod": null,
+                "strUpdateCallback": null,
+                "strVisibilityCheckMethod": null,
+                "booShowEditButton": true,
+                "strEncodingType": "url"
+              },
+              {
+                "strDirectiveTitle": "Image Alignment: ",
+                "strDirectiveType": "BUTTON_COLLECTION",
+                "strDirectiveStyle": "span30",
+                "strStaticValue": null,
+                "strBoundValue": "activities.#.strImageAlignment",
+                "booTemplateability": false,
+                "strTooltip": "Select the alignment of the image.",
+                "intDefaultSelection": 0,
+                "booAllowMultipleSelections": false,
+                "booGroupButtons": true,
+                "arrButtons": [{
+                    "strButtonTitle": "L",
+                    "strButtonValue": "left-align",
+                    "strButtonStyle": "default"
+                  },
+                  {
+                    "strButtonTitle": "C",
+                    "strButtonValue": "centre-align",
+                    "strButtonStyle": "default"
+                  },
+                  {
+                    "strButtonTitle": "R",
+                    "strButtonValue": "right-align",
+                    "strButtonStyle": "default"
+                  }
+                ],
+                "strEnabledCheckMethod": null,
+                "strUpdateCallback": null,
+                "strVisibilityCheckMethod": null
+              },
+              {
+                "strDirectiveTitle": "Border Colour: ",
+                "strDirectiveType": "COLOUR_PICKER",
+                "strDirectiveStyle": "span30",
+                "strStaticValue": null,
+                "strBoundValue": "activities.#.strBorderColour",
+                "booTemplateability": false,
+                "strTooltip": "",
+                "strInitialValue": "",
+                "strEnabledCheckMethod": null,
+                "strUpdateCallback": "",
+                "strVisibilityCheckMethod": null,
+                "strEncodingType": "standard"
+              }
+            ],
+            "strAddCallback": "",
+            "strRemoveCallback": "",
+            "strVisibilityCheckMethod": null
+          },
+          {
+            "strDirectiveType": "BLOCK_END",
+            "strVisibilityCheckMethod": null
+          }
+        ],
+        "strOpenedCallback": "",
+        "strVerfifcationCallback": "",
+        "strClosedCallback": "",
+        "strVisibilityCheckMethod": null
+      },
+      {
+        "strDirectiveTitle": "",
+        "strDirectiveButtonTitle": "Variables",
+        "strDirectivePopupTitle": "Configure Variables",
+        "strDirectiveType": "SUBINSPECTOR",
+        "strDirectiveStyle": "row100",
+        "strPopupDimensionClasses": "popupInspectorMessageSplitDefinitionTallC popupInspectorMessageSplitDefinitionWideC orangePopupInspectorC",
+        "booIsPrimaryConfigurationPopup": true,
+        "arrSubInspectorRenderDirectives": [{
+            "strDirectiveType": "BLOCK_START",
+            "strBlockTitle": "Variables",
+            "booIsExpanded": true,
+            "strVisibilityCheckMethod": null
+          },
+          {
+            "strDirectiveTitle": "",
+            "strDirectiveType": "REPEATABLE_BLOCK",
+            "strBoundValue": "arrGomoVariables",
+            "arrOptionalColumnTitleDefinitions": [{
+              "strColumnTitle": "Variable",
+              "strDirectiveType": "COLUMN_TITLE",
+              "strDirectiveStyle": "span20",
+              "booTemplateability": false,
+              "strTooltip": ""
+            }],
+            "arrBlockRenderDirectives": [{
+              "strDirectiveTitle": "",
+              "strDirectiveType": "DROPDOWN",
+              "strDirectiveStyle": "span20",
+              "strStaticValue": null,
+              "strBoundValue": "arrGomoVaiables.#.strName",
+              "booTemplateability": true,
+              "strTooltip": "",
+              "intSelectedIndex": 0,
+              "arrDropdownContents": [{
+                "strType": "dynamic-block",
+                "strDynamicRenderMethodSuffix": "##VARIABLES_LISTING##"
+              }],
+              "strEnabledCheckMethod": null,
+              "strCustomValueExtractionHandler": null,
+
+              "strUpdateCallback": null,
+              "strVisibilityCheckMethod": null,
+              "strEncodingType": "standard"
+            }],
+            "strAddCallback": "",
+            "strRemoveCallback": "",
+            "strVisibilityCheckMethod": null
+          },
+          {
+            "strDirectiveType": "BLOCK_END",
+            "strVisibilityCheckMethod": null
+          }
+        ],
+        "strOpenedCallback": "",
+        "strVerfifcationCallback": "",
+        "strClosedCallback": "",
+        "strVisibilityCheckMethod": null
+      },
+      {
+        "strDirectiveType": "BLOCK_END",
+        "strVisibilityCheckMethod": null
+      },
+      {
+        "strDirectiveType": "BLOCK_START",
+        "strBlockTitle": "Settings",
+        "booIsExpanded": true,
+        "strVisibilityCheckMethod": null
+      },
+      {
+        "strDirectiveTitle": "",
+        "strDirectiveButtonTitle": "Settings",
+        "strDirectivePopupTitle": "Configure Settings",
+        "strDirectiveType": "SUBINSPECTOR",
+        "strDirectiveStyle": "row100",
+        "strPopupDimensionClasses": "popupInspectorMessageSplitDefinitionTallC popupInspectorMessageSplitDefinitionWideC orangePopupInspectorC",
+        "booIsPrimaryConfigurationPopup": true,
+        "arrSubInspectorRenderDirectives": [{
+            "strDirectiveType": "BLOCK_START",
+            "strBlockTitle": "Settings",
+            "booIsExpanded": true,
+            "strVisibilityCheckMethod": null
+          },
+          {
+            "strDirectiveTitle": "Score saved to: ",
+            "strDirectiveType": "DROPDOWN",
+            "strDirectiveStyle": "row30_70",
+            "strStaticValue": null,
+            "strBoundValue": "strScoreOutputVariable",
+            "booTemplateability": true,
+            "strTooltip": "",
+            "intSelectedIndex": 0,
+            "arrDropdownContents": [{
+              "strType": "dynamic-block",
+              "strDynamicRenderMethodSuffix": "##VARIABLES_LISTING##"
+            }],
+            "strEnabledCheckMethod": null,
+            "strCustomValueExtractionHandler": null,
+
+            "strUpdateCallback": null,
+            "strVisibilityCheckMethod": null,
+            "strEncodingType": "standard"
+          },
+          {
+            "strDirectiveTitle": "Show Status Indicators: ",
+            "strDirectiveType": "CHECKBOX",
+            "strDirectiveStyle": "row30_70",
+            "strStaticValue": null,
+            "strBoundValue": "showStatus",
+            "booTemplateability": false,
+            "strTooltip": "Determines whether status indicators are shown or not",
+            "booDefaultState": false,
+            "strSelectedValue": true,
+            "strEnabledCheckMethod": null,
+            "strUpdateCallback": null,
+            "strVisibilityCheckMethod": null
+          },
+          {
+            "strDirectiveTitle": "Show developer options: ",
+            "strDirectiveType": "CHECKBOX",
+            "strDirectiveStyle": "row30_70",
+            "strStaticValue": null,
+            "strBoundValue": "showDeveloperSettings",
+            "booTemplateability": false,
+            "strTooltip": "Click this to show tags/score/numbering in the module",
+            "booDefaultState": false,
+            "strSelectedValue": true,
+            "strEnabledCheckMethod": null,
+            "strUpdateCallback": null,
+            "strVisibilityCheckMethod": null
+          },
+          {
+            "strDirectiveTitle": "Asset to copy data from: ",
+            "strDirectiveType": "SINGLE_TEXT",
+            "strDirectiveStyle": "row30_70",
+            "strStaticValue": null,
+            "strBoundValue": "copyDataFromAsset",
+            "booTemplateability": false,
+            "strTooltip": "",
+            "strInitialValue": "",
+            "strEnabledCheckMethod": null,
+            "strUpdateCallback": "",
+            "strVisibilityCheckMethod": null,
+            "strEncodingType": "standard"
+          },
+          {
+            "strDirectiveType": "BLOCK_END",
+            "strVisibilityCheckMethod": null
+          },
+          {
+            "strDirectiveTitle": "Selected Categories",
+            "strDirectiveType": "REPEATABLE_BLOCK",
+            "strBoundValue": "selectedCategories",
+            "arrOptionalColumnTitleDefinitions": [],
+            "arrBlockRenderDirectives": [{
+                "strDirectiveTitle": "Category ID: ",
+                "strDirectiveType": "SINGLE_TEXT",
+                "strDirectiveStyle": "span50",
+                "strStaticValue": null,
+                "strBoundValue": "selectedCategories.#.strCategoryID",
+                "booTemplateability": false,
+                "strTooltip": "",
+                "strInitialValue": "",
+                "strEnabledCheckMethod": null,
+                "strUpdateCallback": "",
+                "strVisibilityCheckMethod": null,
+                "strEncodingType": "standard"
+              }, {
+                  "strDirectiveTitle": "Tag: ",
+                  "strDirectiveType": "SINGLE_TEXT",
+                  "strDirectiveStyle": "span50",
+                  "strStaticValue": null,
+                  "strBoundValue": "selectedCategories.#.strTag",
+                  "booTemplateability": false,
+                  "strTooltip": "",
+                  "strInitialValue": "",
+                  "strEnabledCheckMethod": null,
+                  "strUpdateCallback": "",
+                  "strVisibilityCheckMethod": null,
+                  "strEncodingType": "standard"
+                }
+            ],
+            "strAddCallback": "",
+            "strRemoveCallback": "",
+            "strVisibilityCheckMethod": null
+          }
+        ],
+        "strOpenedCallback": "",
+        "strVerfifcationCallback": "",
+        "strClosedCallback": "",
+        "strVisibilityCheckMethod": null
+      },
+      {
+        "strDirectiveType": "BLOCK_END",
+        "strVisibilityCheckMethod": null
+      },
+      {
+        "strDirectiveType": "BLOCK_START",
+        "strBlockTitle": "Display conditions",
+        "booIsExpanded": true,
+        "strVisibilityCheckMethod": null
+      },
+      {
+        "strDirectiveTitle": "",
+        "strButtonTitle": "Set Display Conditions",
+        "strPopupTitle": "Button",
+        "strDirectiveType": "DISPLAY_CONDITIONS_BUTTON",
+        "strDirectiveStyle": "row100",
+        "booIsPrimaryConfigurationPopup": false,
+        "strStaticValue": null,
+        "strBoundValue": "arrDisplayConditions",
+        "booTemplateability": true,
+        "strTooltip": "This is the assets tooltip",
+        "strEnabledCheckMethod": null,
+        "strUpdateCallback": null,
+        "strVisibilityCheckMethod": null,
+        "strEncodingType": "standard"
+      },
+      {
+        "strDirectiveType": "BLOCK_END",
+        "strVisibilityCheckMethod": null
+      },
+      {
+        "strDirectiveType": "BLOCK_START",
+        "strBlockTitle": "Display animation",
+        "booIsExpanded": true,
+        "strVisibilityCheckMethod": null
+      },
+      {
+        "strDirectiveTitle": "Type: ",
+        "strDirectiveType": "DROPDOWN",
+        "strDirectiveStyle": "row30_70",
+        "strStaticValue": null,
+        "strBoundValue": "objDisplayAnimation.strAnimationType",
+        "booTemplateability": true,
+        "strTooltip": "This is the assets tooltip",
+        "intSelectedIndex": 0,
+        "arrDropdownContents": [{
+            "strType": "static",
+            "strTitle": "Fade In",
+            "strValue": "fadeIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Bounce",
+            "strValue": "callout.bounce"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Shake",
+            "strValue": "callout.shake"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Flash",
+            "strValue": "callout.flash"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Pulse",
+            "strValue": "callout.pulse"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Swing",
+            "strValue": "callout.swing"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Tada",
+            "strValue": "callout.tada"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Fade in",
+            "strValue": "transition.fadeIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Flip (horizontal)",
+            "strValue": "transition.flipXIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Flip (vertical)",
+            "strValue": "transition.flipYIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Flip (horizontal bounce)",
+            "strValue": "transition.flipBounceXIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Flip (vertical bounce)",
+            "strValue": "transition.flipBounceYIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Swoop in",
+            "strValue": "transition.swoopIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Whirl in",
+            "strValue": "transition.whirlIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Shrink in",
+            "strValue": "transition.shrinkIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Expand in",
+            "strValue": "transition.expandIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Bounce in",
+            "strValue": "transition.bounceIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Bounce in (up)",
+            "strValue": "transition.bounceUpIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Bounce in (down)",
+            "strValue": "transition.bounceDownIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Bounce in (left)",
+            "strValue": "transition.bounceLeftIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Bounce in (right)",
+            "strValue": "transition.bounceRightIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Slide in short (up)",
+            "strValue": "transition.slideUpIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Slide in short (down)",
+            "strValue": "transition.slideDownIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Slide in short (left)",
+            "strValue": "transition.slideLeftIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Slide in short (right)",
+            "strValue": "transition.slideRightIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Slide in long (up)",
+            "strValue": "transition.slideUpBigIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Slide in long (down)",
+            "strValue": "transition.slideDownBigIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Slide in long (left)",
+            "strValue": "transition.slideLeftBigIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Slide in long (right)",
+            "strValue": "transition.slideRightBigIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Perspective (up)",
+            "strValue": "transition.perspectiveUpIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Perspective (down)",
+            "strValue": "transition.perspectiveDownIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Perspective (left)",
+            "strValue": "transition.perspectiveLeftIn"
+          },
+          {
+            "strType": "static",
+            "strTitle": "Perspective (right)",
+            "strValue": "transition.perspectiveRightIn"
+          }
+        ],
+        "strEnabledCheckMethod": null,
+        "strCustomValueExtractionHandler": null,
+        "strUpdateCallback": null,
+        "strVisibilityCheckMethod": null,
+        "strEncodingType": "standard"
+      },
+      {
+        "strDirectiveTitle": "Delay: ",
+        "strDirectiveType": "SLIDER_HORIZONTAL",
+        "strDirectiveStyle": "row30_70",
+        "strStaticValue": null,
+        "strBoundValue": "objDisplayAnimation.intAnimationDelay",
+        "booTemplateability": false,
+        "strTooltip": "This is the assets tooltip",
+        "strSliderType": "listBasedSlider",
+        "arrSliderPoints": [
+          "0",
+          "0.25",
+          "0.5",
+          "0.75",
+          "1",
+          "1.5",
+          "2",
+          "3",
+          "4",
+          "5",
+          "10",
+          "15",
+          "20",
+          "30",
+          "45",
+          "60"
+        ],
+        "booBalanceSteps": true,
+        "objRange": null,
+        "booSnapToValue": true,
+        "floStepValue": false,
+        "strValueOutputFormatter": "_timeBasedSliderOutputFormatter",
+        "strEnabledCheckMethod": null,
+        "strUpdateCallback": "",
+        "strVisibilityCheckMethod": null,
+        "strEncodingType": "standard"
+      },
+      {
+        "strDirectiveTitle": "Duration: ",
+        "strDirectiveType": "SLIDER_HORIZONTAL",
+        "strDirectiveStyle": "row30_70",
+        "strStaticValue": null,
+        "strBoundValue": "objDisplayAnimation.intAnimationDuration",
+        "booTemplateability": false,
+        "strTooltip": "This is the assets tooltip",
+        "strSliderType": "listBasedSlider",
+        "arrSliderPoints": [
+          "0",
+          "0.25",
+          "0.5",
+          "0.75",
+          "1",
+          "1.5",
+          "2",
+          "3",
+          "4",
+          "5",
+          "10",
+          "15",
+          "20",
+          "30",
+          "45",
+          "60"
+        ],
+        "booBalanceSteps": true,
+        "objRange": null,
+        "booSnapToValue": true,
+        "floStepValue": false,
+        "strValueOutputFormatter": "_timeBasedSliderOutputFormatter",
+        "strEnabledCheckMethod": null,
+        "strUpdateCallback": "",
+        "strVisibilityCheckMethod": null,
+        "strEncodingType": "standard"
+      },
+      {
+        "strDirectiveType": "BLOCK_END",
+        "strVisibilityCheckMethod": null
+      },
+      {
+        "strDirectiveType": "BLOCK_START",
+        "strBlockTitle": "Developer",
+        "booIsExpanded": true,
+        "strVisibilityCheckMethod": "_isPortalFlagSet_developer"
+      },
+      {
+        "strDirectiveTitle": "CSS Classes: ",
+        "strDirectiveType": "MULTI_TEXT",
+        "strDirectiveStyle": "row100",
+        "strStaticValue": null,
+        "strBoundValue": "objDeveloperOptions.objAdvancedStyling.strCustomCSSClasses",
+        "booTemplateability": false,
+        "strTooltip": "This is the assets tooltip",
+        "strInitialValue": "",
+        "intNumberOfLines": 4,
+        "strEnabledCheckMethod": null,
+        "strUpdateCallback": "",
+        "strVisibilityCheckMethod": "_isPortalFlagSet_developer",
+        "strEncodingType": "standard"
+      },
+      {
+        "strDirectiveType": "BLOCK_END",
+        "strVisibilityCheckMethod": "_isPortalFlagSet_developer"
+      }
+    ]
+  },
+  "objCommonDeclarations": {
+    "arrTestDataFragments": [],
+    "arrTestDataFiles": [
+      "thumbnail.jpg",
+      "testAudio.mp3"
+    ],
+    "objLayoutGridSupport": {
+      "intMinColumns": 1,
+      "intMaxColumns": 4,
+      "booNonLayoutAsset": false
+    },
+    "arrCompatibleActions": [
+      "action-link-navigation",
+      "action-link-subscreen",
+      "action-link-web",
+      "action-link-resource",
+      "action-set-image",
+      "action-set-variable",
+      "action-set-accessibility-state",
+      "action-set-course-completion",
+      "action-set-course-overall-score",
+      "action-set-course-success"
+    ],
+    "objAssetCustomActions": []
+  }
+}

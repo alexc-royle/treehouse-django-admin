@@ -16,10 +16,10 @@ class QuizForm(forms.ModelForm):
 
 class QuestionForm(forms.ModelForm):
     class Media:
-        css = {'all': ('courses/css/order.css',)}
+        css = {'all': ('css/order.css',)}
         js = (
-            'courses/js/vendor/jquery.fn.sortable.min.js',
-            'courses/js/order.js'
+            'js/vendor/jquery.fn.sortable.min.js',
+            'js/order.js'
         )
 
 
